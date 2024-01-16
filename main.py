@@ -41,7 +41,7 @@ def criar_arquivo_ofuscado(dados, arquivo_ofuscado, passphrase):
     with open(arquivo_ofuscado, 'wb') as f_ofuscado:
         pickle.dump(dados_ofuscados, f_ofuscado)
 
-    print(f"Todos os dados ofuscados e salvos em {arquivo_ofuscado}")
+    print(f"Dados ofuscados e salvos em {arquivo_ofuscado}")
 
 
 if __name__ == "__main__":
@@ -49,9 +49,27 @@ if __name__ == "__main__":
         1: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
         2: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
         3: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        4: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        5: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        6: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        7: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        8: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        9: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        10: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        11: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        12: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        13: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        14: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        15: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        16: {'IP': '192.168.0.1', 'L': 'usuario1', 'P': 'teste', '': ''},
+        
     }
 
     arquivo_ofuscado = "sicdc.bin"
-    passphrase = "Cnpa2024#"
-
-    criar_arquivo_ofuscado(dados_senhas, arquivo_ofuscado, passphrase)
+    #passphrase = os.getenv("PASSPHRASE")
+    passphrase = input('Digite o PASSPHRASE: \n')
+    if passphrase is None:
+        print("Erro: A variável de ambiente não está configurada.")
+    if passphrase != 0:
+        criar_arquivo_ofuscado(dados_senhas, arquivo_ofuscado, passphrase)
+    
