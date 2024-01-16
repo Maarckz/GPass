@@ -63,5 +63,5 @@ if __name__ == "__main__":
     if passphrase is None:
         print("Erro: A variável de ambiente não está configurada.")
     else:
-        print("        IP      Login        Senha")
+        print("  IP            Login        Senha")
         recuperar_senhas(arquivo_ofuscado, passphrase)
